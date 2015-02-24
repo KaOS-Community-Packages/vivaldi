@@ -9,7 +9,7 @@ options=('!strip' '!emptydirs')
 depends=('gcc-libs' 'gtk2' 'nss' 'gconf' 'libjpeg-turbo' 'freetype2' 'cairo' 'libxslt'
          'libpng' 'alsa-lib' 'libxss' 'hicolor-icon-theme' 'xdg-utils')
 install=${pkgname}.install
-source=("https://vivaldi.com/snapshots/download.php?f=${pkgname}-snapshot_${pkgver}-1_amd64.deb")
+source=("https://vivaldi.com/download/download.php?f=${pkgname}-snapshot_${pkgver}-1_amd64.deb")
 md5sums=('f0360955bcbc474f459fba325165b880')
 
 package() {
