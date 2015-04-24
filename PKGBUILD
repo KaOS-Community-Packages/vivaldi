@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=1.0.156.2
+pkgver=1.0.161.2
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -10,7 +10,7 @@ depends=('gcc-libs' 'gtk2' 'nss' 'gconf' 'libjpeg-turbo' 'freetype2' 'cairo' 'li
          'libpng' 'alsa-lib' 'libxss' 'hicolor-icon-theme' 'xdg-utils')
 install=${pkgname}.install
 source=("http://repo.vivaldi.com/archive/deb/pool/main/${pkgname}-snapshot_${pkgver}-1_amd64.deb")
-md5sums=('bc20c61e974658d419008ff69305a273')
+md5sums=('0a233ce16bee7f83a15283b7a0c48369')
 
 package() {
 	msg "Extracting Vivaldi"
