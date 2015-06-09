@@ -1,6 +1,6 @@
 pkgname=vivaldi
 pkgver=1.0.196.2
-pkgrel=1
+pkgrel=2
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
 url="https://vivaldi.com"
@@ -23,5 +23,7 @@ package() {
 	done
   msg "Removing duplicated images"
   rm "$pkgdir"/opt/vivaldi-snapshot/product_logo_*.png
+  msg "Authorizing Flash plugin (if present)"
+  sed -i "s|chrome|chrome-unstable|g" "$pkgdir"/opt/vivaldi-snapshot/vivaldi-snapshot
   msg "Installation finished!"
 }
