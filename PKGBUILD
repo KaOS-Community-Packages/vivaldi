@@ -11,7 +11,7 @@ depends=('gcc-libs' 'gtk2' 'nss' 'gconf' 'libjpeg-turbo' 'freetype2' 'cairo' 'li
 install=${pkgname}.install
 source=("http://repo.vivaldi.com/archive/deb/pool/main/${pkgname}-snapshot_${pkgver}-1_amd64.deb")
 #source=("https://vivaldi.com/download/snapshot/${pkgname}-snapshot_${pkgver}-1_amd64.deb")
-md5sums=('51d19186d04bd624014cacfce902492b')
+md5sums=('d122c36704ae86c50ea4270a73998113')
 
 package() {
 	msg "Extracting Vivaldi"
@@ -28,4 +28,3 @@ package() {
   sed -i "s|chrome|chrome-unstable|g" "$pkgdir"/opt/vivaldi-snapshot/vivaldi-snapshot
   msg "Installation finished!"
 }
-md5sums=('d122c36704ae86c50ea4270a73998113')
