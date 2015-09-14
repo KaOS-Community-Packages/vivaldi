@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=1.0.270.16
+pkgver=1.0.275.3
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -28,3 +28,4 @@ package() {
   sed -i "s|chrome|chrome-unstable|g" "$pkgdir"/opt/vivaldi-snapshot/vivaldi-snapshot
   msg "Installation finished!"
 }
+md5sums=('d122c36704ae86c50ea4270a73998113')
