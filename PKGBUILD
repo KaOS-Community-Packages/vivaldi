@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=1.0.275.3
+pkgver=1.0.279.3
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -11,7 +11,7 @@ depends=('gcc-libs' 'gtk2' 'nss' 'gconf' 'libjpeg-turbo' 'freetype2' 'cairo' 'li
 install=${pkgname}.install
 source=("http://repo.vivaldi.com/archive/deb/pool/main/${pkgname}-snapshot_${pkgver}-1_amd64.deb")
 #source=("https://vivaldi.com/download/snapshot/${pkgname}-snapshot_${pkgver}-1_amd64.deb")
-md5sums=('d122c36704ae86c50ea4270a73998113')
+md5sums=('f9ab182e2d26da3c870ba4d8afa85ce7')
 
 package() {
 	msg "Extracting Vivaldi"
@@ -22,9 +22,9 @@ package() {
 	for i in 16 22 24 32 48 64 128 256; do
 		install -Dm644 "$pkgdir"/opt/vivaldi-snapshot/product_logo_${i}.png "$pkgdir"/usr/share/icons/hicolor/${i}x${i}/apps/vivaldi.png
 	done
-  msg "Removing duplicated images"
-  rm "$pkgdir"/opt/vivaldi-snapshot/product_logo_*.png
-  msg "Authorizing Flash plugin (if present)"
-  sed -i "s|chrome|chrome-unstable|g" "$pkgdir"/opt/vivaldi-snapshot/vivaldi-snapshot
-  msg "Installation finished!"
+	msg "Removing duplicated images"
+	rm "$pkgdir"/opt/vivaldi-snapshot/product_logo_*.png
+	msg "Authorizing Flash plugin (if present)"
+	sed -i "s|chrome|chrome-unstable|g" "$pkgdir"/opt/vivaldi-snapshot/vivaldi-snapshot
+	msg "Installation finished!"
 }
