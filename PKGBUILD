@@ -26,5 +26,7 @@ package() {
 	rm "$pkgdir"/opt/vivaldi-beta/product_logo_*.png
 	msg "Authorizing Flash plugin (if present)"
 	sed -i "s|chrome|chrome-unstable|g" "$pkgdir"/opt/vivaldi-beta/vivaldi-beta
+	#Correct rights
+	chmod 4755 "${pkgdir}/opt/vivaldi-beta/vivaldi-sandbox"
 	msg "Installation finished!"
 }
