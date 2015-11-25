@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=1.0.330.3
+pkgver=1.0.334.3
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -14,7 +14,7 @@ source=("http://repo.vivaldi.com/archive/deb/pool/main/${pkgname}-${_branch}_${p
         "http://cqoicebordel.free.fr/vivffmpeg/lin64/libffmpeg.so.zip")
 #source=("https://vivaldi.com/download/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
 #        "http://cqoicebordel.free.fr/vivffmpeg/lin64/libffmpeg.so.zip")
-md5sums=('b242ff62fcaa716b017323f5d5ba257e'
+md5sums=('fc7c333235da9a47da00910f5bac3089'
          '9d4e871958b0ecb41cadc600ce220f57')
 
 package() {
