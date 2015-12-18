@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=1.0.344.24
+pkgver=1.0.344.37
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -9,13 +9,12 @@ options=('!strip' '!emptydirs')
 depends=('gcc-libs' 'gtk2' 'nss' 'gconf' 'libjpeg-turbo' 'freetype2' 'cairo' 'libxslt'
          'libpng' 'alsa-lib' 'libxss' 'hicolor-icon-theme' 'xdg-utils')
 install=${pkgname}.install
-_branch="snapshot"
+_branch="beta"
 source=("http://repo.vivaldi.com/archive/deb/pool/main/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
-        "http://cqoicebordel.free.fr/vivffmpeg/lin64/libffmpeg.so.zip")
-#source=("https://vivaldi.com/download/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
-#        "http://cqoicebordel.free.fr/vivffmpeg/lin64/libffmpeg.so.zip")
-md5sums=('b719fd156bba409cb273c9a03f6b11f1'
-         '9d4e871958b0ecb41cadc600ce220f57')
+        "vivaldi-libffmpeg.zip")
+#source=("https://vivaldi.com/download/${pkgname}-${_branch}_${pkgver}-1_amd64.deb")
+md5sums=('571fed995097dfb9d13e1d6a535e2c14'
+         'cd6836852f5f4a6a1fed13d5842b605e')
 
 package() {
 	msg "Extracting Vivaldi"
@@ -28,7 +27,8 @@ package() {
 	done
 	msg "Removing duplicated images"
 	rm "$pkgdir"/opt/vivaldi-${_branch}/product_logo_*.png
-	#Add ffmpeg support
+
+	#Add ffmpeg (H.264/MP4) support 
 	rm "$pkgdir"/opt/vivaldi-${_branch}/lib/libffmpeg.so
 	install -Dm644 "$srcdir"/libffmpeg.so "$pkgdir"/opt/vivaldi-${_branch}/lib/libffmpeg.so
 	msg "Authorizing Flash plugin (if present)"
