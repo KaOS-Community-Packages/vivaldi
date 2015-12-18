@@ -10,10 +10,9 @@ depends=('gcc-libs' 'gtk2' 'nss' 'gconf' 'libjpeg-turbo' 'freetype2' 'cairo' 'li
          'libpng' 'alsa-lib' 'libxss' 'hicolor-icon-theme' 'xdg-utils')
 install=${pkgname}.install
 _branch="snapshot"
-source=("http://repo.vivaldi.com/archive/deb/pool/main/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
-        "vivaldi-libffmpeg.zip")
+source=("http://repo.vivaldi.com/archive/deb/pool/main/${pkgname}-${_branch}_${pkgver}-1_amd64.deb")
 #source=("https://vivaldi.com/download/${pkgname}-${_branch}_${pkgver}-1_amd64.deb")
-md5sums=('e09045a10b59682d555570bc114c598f' 'cd6836852f5f4a6a1fed13d5842b605e')
+md5sums=('e09045a10b59682d555570bc114c598f')
 
 package() {
 	msg "Extracting Vivaldi"
@@ -26,9 +25,9 @@ package() {
 	done
 	msg "Removing duplicated images"
 	rm "$pkgdir"/opt/vivaldi-${_branch}/product_logo_*.png
-	#add ffmpeg (H.264/MP4) support
-	rm "$pkgdir"/opt/vivaldi-${_branch}/lib/libffmpeg.so
-	install -Dm644 "$srcdir"/libffmpeg.so "$pkgdir"/opt/vivaldi-${_branch}/lib/libffmpeg.so
+	
+	
+	
 	msg "Authorizing Flash plugin (if present)"
 	sed -i "s|chrome|chrome-unstable|g" "$pkgdir"/opt/vivaldi-${_branch}/vivaldi-${_branch}
 	#Correct rights
