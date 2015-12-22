@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=1.0.352.3
+pkgver=1.0.357.5
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -12,8 +12,7 @@ install=${pkgname}.install
 _branch="snapshot"
 source=("http://repo.vivaldi.com/archive/deb/pool/main/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
         "https://github.com/Gabrielgtx/ffmpeg/archive/master.zip")
-#source=("https://vivaldi.com/download/${pkgname}-${_branch}_${pkgver}-1_amd64.deb")
-md5sums=('e09045a10b59682d555570bc114c598f' '3a3fe5d3cae1bbbc12197064db86ba34')
+md5sums=('757e424f1c8481fd78d2ceb9654a9eb9' 'SKIP')
 
 package() {
 	msg "Extracting Vivaldi"
