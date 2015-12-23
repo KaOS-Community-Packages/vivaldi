@@ -1,6 +1,6 @@
 pkgname=vivaldi
 pkgver=1.0.357.5
-pkgrel=1
+pkgrel=2
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
 url="https://vivaldi.com"
@@ -12,7 +12,8 @@ install=${pkgname}.install
 _branch="snapshot"
 source=("http://repo.vivaldi.com/archive/deb/pool/main/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
         "https://github.com/Gabrielgtx/ffmpeg/archive/master.zip")
-md5sums=('757e424f1c8481fd78d2ceb9654a9eb9' 'SKIP')
+md5sums=('757e424f1c8481fd78d2ceb9654a9eb9'
+         'SKIP')
 
 package() {
 	msg "Extracting Vivaldi"
@@ -21,7 +22,7 @@ package() {
 	msg "Actual installation"
 	ln -s /usr/lib/libudev.so.1 "${pkgdir}/opt/vivaldi-${_branch}/libudev.so.0"
 	for i in 16 22 24 32 48 64 128 256; do
-		install -Dm644 "$pkgdir"/opt/vivaldi-${_branch}/product_logo_${i}.png "$pkgdir"/usr/share/icons/hicolor/${i}x${i}/apps/vivaldi.png
+		install -Dm644 "$pkgdir"/opt/vivaldi-${_branch}/product_logo_${i}.png "$pkgdir"/usr/share/icons/hicolor/${i}x${i}/apps/vivaldi-${_branch}.png
 	done
 	msg "Removing duplicated images"
 	rm "$pkgdir"/opt/vivaldi-${_branch}/product_logo_*.png
