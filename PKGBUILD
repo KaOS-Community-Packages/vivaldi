@@ -25,10 +25,10 @@ package() {
 	for i in 16 22 24 32 48 64 128 256; do
 		install -Dm644 "$pkgdir"/opt/vivaldi-${_branch}/product_logo_${i}.png "$pkgdir"/usr/share/icons/hicolor/${i}x${i}/apps/vivaldi-${_branch}.png
 	done
-	msg "Removing duplicated images"
-	rm "$pkgdir"/opt/vivaldi-${_branch}/product_logo_*.png
+	msg "Removing unsupported ffmpeg and duplicated images"
 	rm "$pkgdir"/opt/vivaldi-${_branch}/lib/libffmpeg.so
-	msg "installing ffmpeg support (H.264 / MP4)"
+	rm "$pkgdir"/opt/vivaldi-${_branch}/product_logo_*.png
+	msg "installing ffmpeg official support (H.264)"
 	install -Dm644 "$srcdir"/ffmpeg-${pkgbase}/libffmpeg.so "$pkgdir"/opt/vivaldi-${_branch}/lib/libffmpeg.so
 	msg "Authorizing Flash plugin (if present)"
 	sed -i "s|chrome|chrome-unstable|g" "$pkgdir"/opt/vivaldi-${_branch}/vivaldi-${_branch}
