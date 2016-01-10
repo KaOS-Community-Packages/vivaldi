@@ -27,8 +27,8 @@ package() {
 	done
 	msg "Removing duplicated images"
 	rm "$pkgdir"/opt/vivaldi-${_branch}/product_logo_*.png
-	#add ffmpeg (H.264/MP4) support
 	rm "$pkgdir"/opt/vivaldi-${_branch}/lib/libffmpeg.so
+	msg "installing ffmpeg support (H.264 / MP4)"
 	install -Dm644 "$srcdir"/ffmpeg-${pkgbase}/libffmpeg.so "$pkgdir"/opt/vivaldi-${_branch}/lib/libffmpeg.so
 	msg "Authorizing Flash plugin (if present)"
 	sed -i "s|chrome|chrome-unstable|g" "$pkgdir"/opt/vivaldi-${_branch}/vivaldi-${_branch}
