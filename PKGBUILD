@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=1.0.365.3
+pkgver=1.0.375.3
 pkgbase=48.0.2564.48
 pkgrel=1
 _branch="snapshot"
@@ -13,7 +13,7 @@ depends=('gcc-libs' 'gtk2' 'nss' 'gconf' 'libjpeg-turbo' 'freetype2' 'cairo' 'li
 install=${pkgname}.install
 source=("http://repo.vivaldi.com/archive/deb/pool/main/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
         "ffmpeg-v${pkgbase}.tar.gz::https://github.com/Gabrielgtx/ffmpeg/archive/v${pkgbase}.tar.gz")
-md5sums=('acb7ae0f1405e57e2ac81c81d0a607a0'
+md5sums=('11d6419777af23c83ec20406c0d3deeb'
          'c835f635fd8d72493b00f6f021a78505')
 
 package() {
