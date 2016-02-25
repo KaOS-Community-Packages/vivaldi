@@ -1,6 +1,6 @@
 pkgname=vivaldi
 pkgver=1.0.403.15
-pkgbase=48.0.2564.88
+pkgbase=48.0.2564.109
 pkgrel=1
 _branch="snapshot"
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
@@ -14,7 +14,7 @@ install=${pkgname}.install
 source=("https://vivaldi.com/download/${_branch}/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
         "ffmpeg-v${pkgbase}.tar.gz::https://github.com/Gabrielgtx/ffmpeg/archive/v${pkgbase}.tar.gz")
 md5sums=('b4ff2bd68e573eacd5a8cba39b800941'
-         'a24a490eda882b459728314d4c29fc44')
+         '47b1c069dbc0e2a5cfabaae0e7e53bf1')
 
 package() {
 	msg "Extracting Vivaldi"
