@@ -11,7 +11,7 @@ options=('!strip' '!emptydirs')
 depends=('gcc-libs' 'gtk2' 'nss' 'gconf' 'libjpeg-turbo' 'freetype2' 'cairo' 'libxslt'
          'libpng' 'alsa-lib' 'libxss' 'hicolor-icon-theme' 'xdg-utils')
 install=${pkgname}.install
-source=("https://vivaldi.com/download/${_branch}/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
+source=("https://vivaldi.com/download/stable/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
         "ffmpeg-v${pkgbase}.tar.gz::https://github.com/Gabrielgtx/ffmpeg/archive/v${pkgbase}.tar.gz")
 md5sums=('81432af9c7ff4a6c22ce14dd8abef7a9'
          '47b1c069dbc0e2a5cfabaae0e7e53bf1')
