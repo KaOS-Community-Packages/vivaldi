@@ -1,8 +1,8 @@
 pkgname=vivaldi
-pkgver=1.0.403.24
+pkgver=1.0.418.3
 pkgbase=48.0.2564.109
 pkgrel=1
-_branch="beta"
+_branch="snapshot"
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
 url="https://vivaldi.com"
@@ -11,9 +11,9 @@ options=('!strip' '!emptydirs')
 depends=('gcc-libs' 'gtk2' 'nss' 'gconf' 'libjpeg-turbo' 'freetype2' 'cairo' 'libxslt'
          'libpng' 'alsa-lib' 'libxss' 'hicolor-icon-theme' 'xdg-utils')
 install=${pkgname}.install
-source=("https://vivaldi.com/download/stable/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
+source=("https://vivaldi.com/download/${_branch}/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
         "ffmpeg-v${pkgbase}.tar.gz::https://github.com/Gabrielgtx/ffmpeg/archive/v${pkgbase}.tar.gz")
-md5sums=('81432af9c7ff4a6c22ce14dd8abef7a9'
+md5sums=('9f0d0f147eed66687677c14b240b767a'
          '47b1c069dbc0e2a5cfabaae0e7e53bf1')
 
 package() {
