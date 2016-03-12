@@ -1,7 +1,7 @@
 pkgname=vivaldi
 pkgver=1.0.420.4
-pkgbase=48.0.2564.109
-pkgrel=1
+pkgbase=49.0.2623.91
+pkgrel=2
 _branch="snapshot"
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
