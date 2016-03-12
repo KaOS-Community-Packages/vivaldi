@@ -14,7 +14,7 @@ install=${pkgname}.install
 source=("https://vivaldi.com/download/${_branch}/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
         "ffmpeg-v${pkgbase}.tar.gz::https://github.com/Gabrielgtx/ffmpeg/archive/v${pkgbase}.tar.gz")
 md5sums=('cf5ba15069b940a0397818711c1ef3ea'
-         '47b1c069dbc0e2a5cfabaae0e7e53bf1')
+         'd51df4dd3aefd8db72aba7a97fa445ea')
 
 package() {
 	msg "Extracting Vivaldi"
