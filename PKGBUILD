@@ -12,9 +12,9 @@ depends=('gcc-libs' 'gtk2' 'nss' 'gconf' 'libjpeg-turbo' 'freetype2' 'cairo' 'li
          'libpng' 'alsa-lib' 'libxss' 'hicolor-icon-theme' 'xdg-utils')
 install=${pkgname}.install
 source=("https://vivaldi.com/download/${_branch}/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
-        "ffmpeg-v${pkgbase}.tar.gz::https://github.com/Gabrielgtx/ffmpeg/archive/v${pkgbase}.tar.gz")
+        "http://repo.herecura.eu/herecura/x86_64/${pkgname}-${_branch}-ffmpeg-codecs-${pkgbase}-1-x86_64.pkg.tar.xz")
 md5sums=('d38ab5a9637cc4a32846107e6009008f'
-         'd51df4dd3aefd8db72aba7a97fa445ea')
+         'b351beba5e6ce07b8a2612b594999ed6')
 
 package() {
 	msg "Extracting Vivaldi"
@@ -23,13 +23,13 @@ package() {
 	msg "Actual installation"
 	ln -s /usr/lib/libudev.so.1 "${pkgdir}/opt/vivaldi-${_branch}/libudev.so.0"
 	for i in 16 22 24 32 48 64 128 256; do
-		install -Dm644 "$pkgdir"/opt/vivaldi-${_branch}/product_logo_${i}.png "$pkgdir"/usr/share/icons/hicolor/${i}x${i}/apps/vivaldi-${_branch}.png
+	install -Dm644 "$pkgdir"/opt/vivaldi-${_branch}/product_logo_${i}.png "$pkgdir"/usr/share/icons/hicolor/${i}x${i}/apps/vivaldi-${_branch}.png
 	done
 	msg "Removing unsupported ffmpeg and duplicated images"
 	rm "$pkgdir"/opt/vivaldi-${_branch}/lib/libffmpeg.so
 	rm "$pkgdir"/opt/vivaldi-${_branch}/product_logo_*.png
 	msg "installing ffmpeg official support (H.264)"
-	install -Dm644 "$srcdir"/ffmpeg-${pkgbase}/libffmpeg.so "$pkgdir"/opt/vivaldi-${_branch}/lib/libffmpeg.so
+	install -Dm644 "$srcdir"/opt/vivaldi-${_branch}/libffmpeg.so "$pkgdir"/opt/vivaldi-${_branch}/lib/libffmpeg.so
 	msg "Authorizing Flash plugin (if present)"
 	sed -i "s|chrome|chrome-unstable|g" "$pkgdir"/opt/vivaldi-${_branch}/vivaldi-${_branch}
 	#Correct rights
