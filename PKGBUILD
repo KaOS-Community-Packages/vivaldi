@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=1.0.422.8
+pkgver=1.0.425.3
 pkgbase=49.0.2623.91
 pkgrel=1
 _branch="snapshot"
@@ -14,7 +14,7 @@ install=${pkgname}.install
 source=("https://vivaldi.com/download/${_branch}/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
         "http://repo.herecura.eu/herecura/x86_64/${pkgname}-${_branch}-ffmpeg-codecs-${pkgbase}-1-x86_64.pkg.tar.xz")
 md5sums=('d38ab5a9637cc4a32846107e6009008f'
-         'b351beba5e6ce07b8a2612b594999ed6')
+         'bb6d8ffe0736c26d3f2af52aaf243734')
 
 package() {
 	msg "Extracting Vivaldi"
