@@ -1,7 +1,7 @@
 pkgname=vivaldi
-pkgver=1.0.425.3
+pkgver=1.0.429.5
 pkgbase=49.0.2623.91
-pkgrel=2
+pkgrel=1
 _branch="snapshot"
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -14,7 +14,7 @@ optdepends=('pepper-flash: Pepper Flash plugin')
 install=${pkgname}.install
 source=("https://vivaldi.com/download/${_branch}/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
         "http://repo.herecura.eu/herecura/x86_64/${pkgname}-${_branch}-ffmpeg-codecs-${pkgbase}-1-x86_64.pkg.tar.xz")
-md5sums=('bb6d8ffe0736c26d3f2af52aaf243734'
+md5sums=('5110947325aef2e3a6c870fed0b07d1f'
          'b351beba5e6ce07b8a2612b594999ed6')
 
 package() {
@@ -31,8 +31,6 @@ package() {
 	rm "$pkgdir"/opt/vivaldi-${_branch}/product_logo_*.png
 	msg "installing ffmpeg official support (H.264)"
 	install -Dm644 "$srcdir"/opt/vivaldi-${_branch}/libffmpeg.so "$pkgdir"/opt/vivaldi-${_branch}/lib/libffmpeg.so
-	msg "Authorizing Flash plugin (if present)"
-	#sed -i "s|chrome|chrome-unstable|g" "$pkgdir"/opt/vivaldi-${_branch}/vivaldi-${_branch}
 	#Correct rights
 	chmod 4755 "${pkgdir}/opt/vivaldi-${_branch}/vivaldi-sandbox"
 	msg "Installation finished!"
