@@ -1,7 +1,7 @@
 pkgname=vivaldi
 pkgver=1.0.435.5
-pkgbase=49.0.2623.91
-pkgrel=1
+pkgbase=49.0.2623.110
+pkgrel=2
 _branch="snapshot"
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -13,9 +13,9 @@ depends=('gcc-libs' 'gtk2' 'nss' 'gconf' 'libjpeg-turbo' 'freetype2' 'cairo' 'li
 optdepends=('pepper-flash: Pepper Flash plugin')
 install=${pkgname}.install
 source=("https://vivaldi.com/download/${_branch}/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
-        "http://repo.herecura.eu/herecura/x86_64/${pkgname}-${_branch}-ffmpeg-codecs-${pkgbase}-1-x86_64.pkg.tar.xz")
+        "http://repo.herecura.eu/herecura/${arch}/${pkgname}-${_branch}-ffmpeg-codecs-${pkgbase}-1-${arch}.pkg.tar.xz")
 md5sums=('50fe538417dfb50fff5e18e0fa682d20'
-         'b351beba5e6ce07b8a2612b594999ed6')
+         '2915d677f47141a6f11216a384aabda5')
 
 package() {
 	msg "Extracting Vivaldi"
