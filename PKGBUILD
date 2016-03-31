@@ -1,7 +1,7 @@
 pkgname=vivaldi
-pkgver=1.0.435.5
+pkgver=1.0.435.22
 pkgbase=49.0.2623.110
-pkgrel=2
+pkgrel=1
 _branch="snapshot"
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -14,7 +14,7 @@ optdepends=('pepper-flash: Pepper Flash plugin')
 install=${pkgname}.install
 source=("https://vivaldi.com/download/${_branch}/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
         "http://repo.herecura.eu/herecura/${arch}/${pkgname}-${_branch}-ffmpeg-codecs-${pkgbase}-1-${arch}.pkg.tar.xz")
-md5sums=('50fe538417dfb50fff5e18e0fa682d20'
+md5sums=('d92b0d2007e6f1b1f8bbfe0dedd129af'
          '2915d677f47141a6f11216a384aabda5')
 
 package() {
