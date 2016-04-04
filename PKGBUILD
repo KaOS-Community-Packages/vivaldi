@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=1.0.435.26
+pkgver=1.0.435.29
 pkgbase=49.0.2623.110
 pkgrel=1
 _branch="snapshot"
@@ -14,7 +14,7 @@ optdepends=('pepper-flash: Pepper Flash plugin')
 install=${pkgname}.install
 source=("https://vivaldi.com/download/${_branch}/${pkgname}-${_branch}_${pkgver}-1_amd64.deb"
         "http://repo.herecura.eu/herecura/${arch}/${pkgname}-${_branch}-ffmpeg-codecs-${pkgbase}-1-${arch}.pkg.tar.xz")
-md5sums=('6a42265a2710b65e072cb2b49d70ec8d'
+md5sums=('3927f4d0cf8988f6e8d584055362d55e'
          '2915d677f47141a6f11216a384aabda5')
 
 package() {
