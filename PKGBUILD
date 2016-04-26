@@ -11,7 +11,7 @@ depends=('gcc-libs' 'gtk2' 'nss' 'gconf' 'libjpeg-turbo' 'freetype2' 'cairo' 'li
 optdepends=('pepper-flash: Pepper Flash plugin')
 install=${pkgname}.install
 backup=("opt/vivaldi/resources/vivaldi/style/custom.css")
-source=("https://vivaldi.com/download/stable/${pkgname}-stable_${pkgver}-1_amd64.deb")
+source=("https://downloads.vivaldi.com/stable/${pkgname}-stable_${pkgver}-1_amd64.deb")
 md5sums=('69cf2a7738d963dfc72247a64edf332e')
 
 package() {
