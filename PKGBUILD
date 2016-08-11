@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=1.2.490.43
+pkgver=1.3.551.30
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -33,3 +33,4 @@ package() {
 	chmod 666 "$pkgdir"/opt/vivaldi/resources/vivaldi/style/custom.css
 	msg "Installation finished!"
 }
+md5sums=('3f9714fc9bfbad7e60af06fdcf12aa2e')
