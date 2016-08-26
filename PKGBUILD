@@ -33,4 +33,3 @@ package() {
 	chmod 666 "$pkgdir"/opt/vivaldi/resources/vivaldi/style/custom.css
 	msg "Installation finished!"
 }
-md5sums=('3f9714fc9bfbad7e60af06fdcf12aa2e')
