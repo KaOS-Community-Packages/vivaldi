@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=1.3.551.30
+pkgver=1.3.551.38
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -11,7 +11,7 @@ depends=('gcc-libs' 'gtk2' 'nss' 'gconf' 'libjpeg-turbo' 'freetype2' 'cairo' 'li
 optdepends=('pepper-flash: Pepper Flash plugin')
 backup=("opt/vivaldi/resources/vivaldi/style/custom.css")
 source=("https://downloads.vivaldi.com/stable/${pkgname}-stable_${pkgver}-1_amd64.deb")
-md5sums=('671ea1ff3a26e70cc0a4f3dda109eb9a')
+md5sums=('1e8f874fe46584d8f8c047545f94655c')
 
 package() {
 	msg "Extracting Vivaldi"
