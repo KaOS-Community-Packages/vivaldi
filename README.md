@@ -7,13 +7,9 @@ Vivaldi browser is made for power users in mind by people who love the Web.
 
 URL: https://vivaldi.com
 
-Needed from kcp:
-[vivaldi-ffmpeg](../../../vivaldi-ffmpeg)
 
 Install:
-```
-kcp -di vivaldi-ffmpeg
-```
+
 ```
 kcp -i vivaldi
 ```
