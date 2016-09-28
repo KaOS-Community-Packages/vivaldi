@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=1.4.589.11
+pkgver=1.4.589.29
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -14,7 +14,7 @@ provides=('vivaldi-ffmpeg')
 replaces=('vivaldi-ffmpeg')
 backup=("opt/vivaldi/resources/vivaldi/style/custom.css")
 source=("https://downloads.vivaldi.com/stable/${pkgname}-stable_${pkgver}-1_amd64.deb")
-md5sums=('6795622923681c43407ab4acd78c5e9d')
+md5sums=('68e6ddbbc54adb1a43e067ca777dbe5d')
 
 package() {
 	msg "Extracting Vivaldi"
@@ -34,8 +34,5 @@ package() {
 	sed -i 's|^|@import "custom.css";|' "$pkgdir"/opt/vivaldi/resources/vivaldi/style/common.css
 	touch "$pkgdir"/opt/vivaldi/resources/vivaldi/style/custom.css
 	chmod 666 "$pkgdir"/opt/vivaldi/resources/vivaldi/style/custom.css
-	#miss symlink in /usr/bin
-	mkdir -p ${pkgdir}/usr/bin
-	ln -sf "/opt/vivaldi/vivaldi" "${pkgdir}/usr/bin/vivaldi-stable"
 	msg "Installation finished!"
 }
