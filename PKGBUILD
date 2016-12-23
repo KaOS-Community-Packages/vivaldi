@@ -1,13 +1,13 @@
 pkgname=vivaldi
 pkgver=1.6.689.46
-pkgrel=1
+pkgrel=2
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
 url="https://vivaldi.com"
 license=('custom: Vivaldi')
 options=('!strip' '!emptydirs')
 depends=('gcc-libs' 'gtk2' 'nss' 'gconf' 'libjpeg-turbo' 'freetype2' 'cairo' 'libxslt'
-         'libpng' 'alsa-lib' 'libxss' 'hicolor-icon-theme' 'xdg-utils' 'chromium-ffmpeg-codecs')
+         'libpng' 'alsa-lib' 'libxss' 'hicolor-icon-theme' 'xdg-utils' 'chromium-ffmpeg-codecs' 'widevine')
 optdepends=('pepper-flash: Pepper Flash plugin')
 conflicts=('vivaldi-ffmpeg')
 provides=('vivaldi-ffmpeg')
@@ -28,6 +28,7 @@ package() {
 	rm "$pkgdir"/opt/vivaldi/lib/libffmpeg.so
 	rm "$pkgdir"/opt/vivaldi/product_logo_*.png
 	ln -s /usr/lib/chromium/libs/libffmpeg.so "$pkgdir"/opt/vivaldi/lib/libffmpeg.so
+	ln -sf /opt/google/chrome-unstable/libwidevinecdm.so "$pkgdir"/opt/vivaldi/libwidevinecdm.so
 	#Correct rights
 	chmod 4755 "${pkgdir}/opt/vivaldi/vivaldi-sandbox"
 	msg "Add a hack to modify UI"
