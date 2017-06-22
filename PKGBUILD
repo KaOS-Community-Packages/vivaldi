@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=1.10.867.38
+pkgver=1.10.867.42
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')

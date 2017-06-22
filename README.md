@@ -5,10 +5,10 @@ The web browser from Vivaldi
 
 Vivaldi browser is made for power users in mind by people who love the Web.
 
-URL: https://vivaldi.com
+[Homepage](https://vivaldi.com)
 
 
-Install:
+### Install:
 
 ```
 kcp -i vivaldi
