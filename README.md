@@ -1,17 +1,16 @@
 vivaldi
 =======
-![logo-dark](https://vivaldi.com/press/logos/vivaldi_logo_dark.png)
+[![logo](https://vivaldi.net/wp-content/themes/vivaldi/img/logo1x.png)](https://vivaldi.com)
 The web browser from Vivaldi
 
 Vivaldi browser is made for power users in mind by people who love the Web.
-
-[Homepage](https://vivaldi.com)
-
 
 ### Install:
 
 ```
 kcp -i vivaldi
 ```
-![speed-dials](https://vivaldi.com/press/screenshots/vivaldi-speed-dials.png)
-![screenshot](https://vivaldi.com/press/highres/wallpapers/Wallpaper_Red_Icon_Gradient.png)
+![screenshot](https://vivaldi.net/wp-content/uploads/2018/09/vivaldi-2-0-hero.png)
+
+![speed-dials](https://vivaldi.com/wp-content/uploads/hero-slide-4b.jpg)
+
