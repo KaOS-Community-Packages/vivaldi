@@ -13,7 +13,7 @@ conflicts=('vivaldi-ffmpeg')
 provides=('vivaldi-ffmpeg')
 replaces=('vivaldi-ffmpeg')
 source=("https://downloads.vivaldi.com/stable/${pkgname}-stable_${pkgver}-1_amd64.deb")
-md5sums=('e6573c47cef8f4a6b06667499fdd2d3c')
+md5sums=('76909c52c569d5a10ece9a6dc68788dc')
 
 package() {
 	msg "Extracting Vivaldi"
@@ -33,4 +33,3 @@ package() {
 	chmod 4755 "${pkgdir}/opt/vivaldi/vivaldi-sandbox"
 	msg "Installation finished!"
 }
-md5sums=('76909c52c569d5a10ece9a6dc68788dc')
