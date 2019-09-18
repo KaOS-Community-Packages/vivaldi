@@ -1,6 +1,6 @@
 pkgname=vivaldi
 pkgver=2.7.1628.33
-pkgrel=1
+pkgrel=2
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
 url="https://vivaldi.com"
@@ -28,7 +28,7 @@ package() {
 	rm "$pkgdir"/opt/vivaldi/lib/libffmpeg.so
 	rm "$pkgdir"/opt/vivaldi/product_logo_*.png
 	ln -s /usr/lib/chromium/libs/libffmpeg.so "$pkgdir"/opt/vivaldi/lib/libffmpeg.so
-	ln -sf /opt/google/chrome-unstable/libwidevinecdm.so "$pkgdir"/opt/vivaldi/libwidevinecdm.so
+	ln -sf / opt/google/chrome-unstable/WidevineCdm/_platform_specific/linux_x64/libwidevinecdm.so "$pkgdir"/opt/vivaldi/libwidevinecdm.so
 	#Correct rights
 	chmod 4755 "${pkgdir}/opt/vivaldi/vivaldi-sandbox"
 	msg "Installation finished!"
