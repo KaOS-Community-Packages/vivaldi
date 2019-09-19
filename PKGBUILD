@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=2.7.1628.33
+pkgver=2.8.1664.35
 pkgrel=2
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -13,7 +13,7 @@ conflicts=('vivaldi-ffmpeg')
 provides=('vivaldi-ffmpeg')
 replaces=('vivaldi-ffmpeg')
 source=("https://downloads.vivaldi.com/stable/${pkgname}-stable_${pkgver}-1_amd64.deb")
-md5sums=('d8f10f7ffd874fba787776139e124e63')
+md5sums=('806777e855c20f31fc4d792b9189fefa')
 
 package() {
 	msg "Extracting Vivaldi"
@@ -28,7 +28,7 @@ package() {
 	rm "$pkgdir"/opt/vivaldi/lib/libffmpeg.so
 	rm "$pkgdir"/opt/vivaldi/product_logo_*.png
 	ln -s /usr/lib/chromium/libs/libffmpeg.so "$pkgdir"/opt/vivaldi/lib/libffmpeg.so
-	ln -sf / opt/google/chrome-unstable/WidevineCdm/_platform_specific/linux_x64/libwidevinecdm.so "$pkgdir"/opt/vivaldi/libwidevinecdm.so
+	ln -sf /opt/google/chrome-unstable/WidevineCdm/_platform_specific/linux_x64/libwidevinecdm.so "$pkgdir"/opt/vivaldi/libwidevinecdm.so
 	#Correct rights
 	chmod 4755 "${pkgdir}/opt/vivaldi/vivaldi-sandbox"
 	msg "Installation finished!"
