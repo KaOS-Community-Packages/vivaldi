@@ -1,5 +1,6 @@
 pkgname=vivaldi
-pkgver=2.8.1664.36
+pkgver=2.8.1664.40
+_pkgver=${pkgver}-1
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -12,8 +13,8 @@ optdepends=('pepper-flash: Pepper Flash plugin')
 conflicts=('vivaldi-ffmpeg')
 provides=('vivaldi-ffmpeg')
 replaces=('vivaldi-ffmpeg')
-source=("https://downloads.vivaldi.com/stable/${pkgname}-stable_${pkgver}-2_amd64.deb")
-md5sums=('35a3f88f9dc001d3bdd466a3a46bf2f7')
+source=("https://downloads.vivaldi.com/stable/${pkgname}-stable_${_pkgver}_amd64.deb")
+md5sums=('02d9030e299ca238ba4bcfd6a43751da')
 
 package() {
 	msg "Extracting Vivaldi"
