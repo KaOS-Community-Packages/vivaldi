@@ -1,7 +1,7 @@
 pkgname=vivaldi
-pkgver=2.9.1705.31
+pkgver=2.9.1705.38
 _pkgver=${pkgver}-1
-pkgrel=3
+pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
 url="https://vivaldi.com"
@@ -37,3 +37,4 @@ package() {
 	chmod 4755 "${pkgdir}/opt/vivaldi/vivaldi-sandbox"
 	msg "Installation finished!"
 }
+md5sums=('554ab7e18604cad93e7b688debcda095')
