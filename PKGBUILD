@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=2.9.1705.38
+pkgver=2.9.1705.41
 _pkgver=${pkgver}-1
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
@@ -14,7 +14,7 @@ conflicts=('vivaldi-ffmpeg')
 provides=('vivaldi-ffmpeg')
 replaces=('vivaldi-ffmpeg')
 source=("https://downloads.vivaldi.com/stable/${pkgname}-stable_${_pkgver}_amd64.deb")
-md5sums=('b6900b68446882fda2799aa7636ebecf')
+md5sums=('915726cc2bac8e85db00a6edab97f43b')
 
 package() {
 	msg "Extracting Vivaldi"
@@ -25,8 +25,8 @@ package() {
 	for i in 16 22 24 32 48 64 128 256; do
         install -Dm644 "$pkgdir"/opt/vivaldi/product_logo_${i}.png "$pkgdir"/usr/share/icons/hicolor/${i}x${i}/apps/vivaldi.png
 	done
-	msg "Removing unsupported duplicated images"
-	rm "$pkgdir"/opt/vivaldi/lib/libffmpeg.so
+	msg "Removing duplicated images"
+	#rm "$pkgdir"/opt/vivaldi/lib/libffmpeg.so
 	rm "$pkgdir"/opt/vivaldi/product_logo_*.png
 	msg "Linking proprietary codecs"
 	#ln -s /usr/lib/chromium/libs/libffmpeg.so "$pkgdir"/opt/vivaldi/lib/libffmpeg.so
@@ -37,4 +37,3 @@ package() {
 	chmod 4755 "${pkgdir}/opt/vivaldi/vivaldi-sandbox"
 	msg "Installation finished!"
 }
-md5sums=('554ab7e18604cad93e7b688debcda095')
