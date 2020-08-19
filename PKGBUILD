@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=3.2.1967.45
+pkgver=3.2.1967.47
 _pkgver=${pkgver}-1
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
@@ -14,7 +14,7 @@ conflicts=('vivaldi-ffmpeg')
 provides=('vivaldi-ffmpeg')
 replaces=('vivaldi-ffmpeg')
 source=("https://downloads.vivaldi.com/stable/${pkgname}-stable_${_pkgver}_amd64.deb")
-md5sums=('4e233d7744f0baa1bad19677d5b66035')
+md5sums=('2c8db883c7a20595ae5cd24fae027ae6')
 
 package() {
 	msg "Extracting Vivaldi"
