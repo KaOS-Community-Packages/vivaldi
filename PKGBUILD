@@ -14,7 +14,7 @@ conflicts=('vivaldi-ffmpeg')
 provides=('vivaldi-ffmpeg')
 replaces=('vivaldi-ffmpeg')
 source=("https://downloads.vivaldi.com/stable/${pkgname}-stable_${_pkgver}_amd64.deb")
-md5sums=('735e426f2dbbf3eea361a86253927fdd')
+md5sums=('1ee1c0547398d2f85487950c8a279275')
 
 package() {
 	msg "Extracting Vivaldi"
