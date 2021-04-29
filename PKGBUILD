@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=3.7.2218.58
+pkgver=3.8.2259.37
 _pkgver=${pkgver}-1
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
@@ -14,7 +14,7 @@ conflicts=('vivaldi-ffmpeg')
 provides=('vivaldi-ffmpeg')
 replaces=('vivaldi-ffmpeg')
 source=("https://downloads.vivaldi.com/stable/${pkgname}-stable_${_pkgver}_amd64.deb")
-md5sums=('1ee1c0547398d2f85487950c8a279275')
+md5sums=('b2042fe6471a60a84c9d8a641d99d6da')
 
 package() {
 	msg "Extracting Vivaldi"
@@ -37,3 +37,4 @@ package() {
 	chmod 4755 "${pkgdir}/opt/vivaldi/vivaldi-sandbox"
 	msg "Installation finished!"
 }
+md5sums=('8b2c3de7eee58fae830afa87be8cc13d')
