@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=4.2.2406.48
+pkgver=4.2.2406.52
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -8,12 +8,12 @@ license=('custom: Vivaldi')
 options=('!strip' '!emptydirs')
 depends=('gcc-libs' 'gtk3' 'nss' 'libjpeg-turbo' 'freetype2' 'cairo' 'libxslt'
          'libpng' 'alsa-lib' 'libxss' 'hicolor-icon-theme' 'xdg-utils' 'widevine')
-source=("https://downloads.vivaldi.com/stable/${pkgname}-${pkgver}-linux64.tzst")
-sha256sums=('01c34b985943c6005436f7000d0d92004bfe68eff1bc742773ca217a8af6a7e4')
+source=("https://downloads.vivaldi.com/stable/${pkgname}-stable-${pkgver}-1.x86_64.rpm")
+sha256sums=('3fe519ac37214923a552eb420ba2d525ee7e863cafe1699c913b6fe922d2de1c')
 
-prepare() {
-	sed -i 's|/usr/local/bin|/usr/bin|g' "${srcdir}/usr/local/share/applications/${pkgname}-stable.desktop"
-}
+#prepare() {
+#	sed -i 's|/usr/local/bin|/usr/bin|g' "${srcdir}/usr/local/share/applications/${pkgname}-stable.desktop"
+#}
 
 package() {
 	msg "Prepare dirs"
@@ -23,9 +23,9 @@ package() {
 
 	msg "Copy files"
 	cp -r "${srcdir}/opt/${pkgname}/"* "${pkgdir}/opt/${pkgname}"
-	install -Dm644 "${srcdir}/usr/local/share/appdata/${pkgname}.appdata.xml" \
+	install -Dm644 "${srcdir}/usr/share/appdata/${pkgname}.appdata.xml" \
 	               "${pkgdir}/usr/share/appdata/${pkgname}.appdata.xml"
-	install -Dm644 "${srcdir}/usr/local/share/applications/${pkgname}-stable.desktop" \
+	install -Dm644 "${srcdir}/usr/share/applications/${pkgname}-stable.desktop" \
 	               "${pkgdir}/usr/share/applications/${pkgname}-stable.desktop"
 
 	msg "Copy icons"
