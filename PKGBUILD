@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=5.0.2497.30
+pkgver=5.0.2497.32
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -9,7 +9,7 @@ options=('!strip' '!emptydirs')
 depends=('gcc-libs' 'gtk3' 'nss' 'libjpeg-turbo' 'freetype2' 'cairo' 'libxslt'
          'libpng' 'alsa-lib' 'libxss' 'hicolor-icon-theme' 'xdg-utils' 'widevine')
 source=("https://downloads.vivaldi.com/stable/${pkgname}-stable-${pkgver}-1.x86_64.rpm")
-sha256sums=('7a33091bb2fa247140dd7be240499dbcbf876b597717bd2e3ab0b0b2d3e93536')
+sha256sums=('a4a3762cd2110d673c0398e54cb12a455fc5a8399eae3c8b933af5f1dd5f24e4')
 
 #prepare() {
 #	sed -i 's|/usr/local/bin|/usr/bin|g' "${srcdir}/usr/local/share/applications/${pkgname}-stable.desktop"
