@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=5.1.2567.73
+pkgver=5.2.2623.24
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -9,7 +9,7 @@ options=('!strip' '!emptydirs')
 depends=('gcc-libs' 'gtk3' 'nss' 'libjpeg-turbo' 'freetype2' 'cairo' 'libxslt'
          'libpng' 'alsa-lib' 'libxss' 'hicolor-icon-theme' 'xdg-utils' 'widevine')
 source=("https://downloads.vivaldi.com/stable/${pkgname}-stable-${pkgver}-1.x86_64.rpm")
-sha256sums=('dc875dcca08baf597e3b7ad97670b3d30851d382d8c355e4ea3566ae0c1ca4a3')
+sha256sums=('14634d2f61c88173dfae1ef4b1748237d9ece9c5ba29f86cab342638c9d33d7b')
 
 package() {
 	msg "Prepare dirs"
@@ -44,3 +44,4 @@ package() {
 	chmod 4755 "${pkgdir}/opt/${pkgname}/vivaldi-sandbox"
 	msg "Installation finished!"
 }
+
