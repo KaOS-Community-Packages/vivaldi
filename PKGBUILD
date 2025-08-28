@@ -1,5 +1,5 @@
 pkgname=vivaldi
-pkgver=7.5.3735.64
+pkgver=7.5.3735.66
 pkgrel=1
 pkgdesc='The web browser from Vivaldi / Vivaldi browser is made for power users in mind by people who love the Web.'
 arch=('x86_64')
@@ -9,7 +9,7 @@ options=('!strip' '!emptydirs')
 depends=('gcc-libs' 'gtk3' 'nss' 'libjpeg-turbo' 'freetype2' 'cairo' 'libxslt'
          'libpng' 'alsa-lib' 'libxss' 'hicolor-icon-theme' 'xdg-utils' 'widevine')
 source=("https://downloads.vivaldi.com/stable/${pkgname}-stable-${pkgver}-1.x86_64.rpm")
-sha256sums=('8c09819fab882d2fe87ff9a0adb6be861b282bbb17963a1a31108f8efc142e75')
+sha256sums=('79d6346a48b18345d77e413a1f954d4468f83623ed557a0cb76b3ffc2e81d10d')
 
 package() {
 	msg "Prepare dirs"
